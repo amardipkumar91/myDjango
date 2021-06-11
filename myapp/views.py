@@ -4,3 +4,4 @@ from django.shortcuts import render
 
 def foo():
     print ('i')
+    
