@@ -10,5 +10,9 @@ def bar():
 
 def lol():
     print ("hello")
+
+def foo1():
+    print ("ss")
+    
 def nn():
     print ("ji")
