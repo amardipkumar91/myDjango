@@ -7,3 +7,6 @@ def foo():
     
 def bar():
     print ("hi")
+
+def nn():
+    print ("ji")
