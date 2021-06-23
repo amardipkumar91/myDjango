@@ -8,5 +8,7 @@ def foo():
 def bar():
     print ("hi")
 
+def lol():
+    print ("hello")
 def nn():
     print ("ji")
