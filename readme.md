@@ -1,4 +1,5 @@
 # Create Super user 
+python manage.py createsuperuser
 
 # - Migration
 # 1. First Migration it will create follwing tables:- 
@@ -17,6 +18,7 @@ django_session
 
 # 2. After Model Creation
 python manage.py makemigrations
+python manage.py migrate
 
 # 3. Create Model from table
 python manage.py inspectdb student_class >> myapp/models.py
