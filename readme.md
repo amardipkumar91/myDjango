@@ -1,3 +1,5 @@
+# Create Super user 
+
 # - Migration
 # 1. First Migration it will create follwing tables:- 
 python manage.py migrate
