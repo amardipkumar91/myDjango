@@ -1,3 +1,7 @@
+# Grant all permission to mysql specific database
+
+GRANT ALL PRIVILEGES ON test_new1.* TO 'vicky'@'%' WITH GRANT OPTION;
+
 # Create Super user 
 python manage.py createsuperuser
 
