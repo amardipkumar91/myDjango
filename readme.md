@@ -1,5 +1,5 @@
 # Grant all permission to mysql specific database
-
+CREATE USER 'vicku'@'%' IDENTIFIED BY '****';
 GRANT ALL PRIVILEGES ON test_new1.* TO 'vicky'@'%' WITH GRANT OPTION;
 
 # Create Super user 

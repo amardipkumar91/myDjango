@@ -15,6 +15,17 @@ class Students(models.Model):
     
     def __str__(self):
         return f"{self.name}"
+    
+    def save(self, *args, **kwargs):
+        name = self.name
+        roll = self.roll
+        age = self.age
+        s_class = 'Name of Student: {0} and Roll is : {1}'.format(name, roll)
+        self.s_class = s_class
+        super(Students, self).save(*args, **kwargs)
+        print ("Done")
+
+
         
 # This is an auto-generated Django model module.
 # You'll have to do the following manually to clean this up:
@@ -52,3 +63,21 @@ class StudentClassnew(models.Model):
 
     class Meta:
         db_table = 'student_classnew'
+
+
+class Publication(models.Model):
+    title = models.CharField(max_length=30)
+    class Meta:
+        ordering = ['title']
+    def __str__(self):
+        return self.title
+
+class Article(models.Model):
+    headline = models.CharField(max_length=100)
+    publications = models.ManyToManyField(Publication)
+
+    class Meta:
+        ordering = ['headline']
+
+    def __str__(self):
+        return self.headline

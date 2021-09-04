@@ -15,6 +15,8 @@ import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+import dj_database_url
+from decouple import config
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -77,13 +79,31 @@ WSGI_APPLICATION = 'myDjango.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'mysql.connector.django',
-        'NAME': 'new_db',
+        'NAME': 'test_new1',
         'USER': 'vicky',
         'PASSWORD': '1234',
         'HOST': 'localhost',
         'PORT': '3306',
     }
 }
+
+# DATABASES = {
+#     'default': dj_database_url.config(
+#         default=config('DATABASE_URL')
+#     )
+# }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'test_new',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Vicky@1234',
+#         'HOST' : 'localhost'
+
+#     }
+# }
+
 
 
 # Password validation
